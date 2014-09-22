@@ -44,4 +44,7 @@
 
   "All together now!"
   (= "Test Testerson, 123 Test Lane, Testerville, TX"
-     (___ ["Test" "Testerson"] test-address)))
+     ((fn [[first-arg second-arg] {:keys [street-address city state]}]
+        (str first-arg " " second-arg ", " street-address ", " city ", " state)) ["Test" "Testerson"] test-address)))
+
+
